@@ -12,6 +12,7 @@
 
 
 **[Visual AI Lab, HKU](https://visailab.github.io/people.html)**
+
 [Kun-Yu Lin](https://kunyulin.github.io/), [Hongjun Wang](https://whj363636.github.io/), [Weining Ren](https://github.com/rwn17), [Kai Han](https://www.kaihan.org/)
 </div>
 
