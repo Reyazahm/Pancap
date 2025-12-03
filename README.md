@@ -12,7 +12,6 @@
 
 
 **[Visual AI Lab, HKU](https://visailab.github.io/people.html)**
-
 [Kun-Yu Lin](https://kunyulin.github.io/), [Hongjun Wang](https://whj363636.github.io/), [Weining Ren](https://github.com/rwn17), [Kai Han](https://www.kaihan.org/)
 </div>
 
@@ -23,10 +22,13 @@
 ## 🌈 Overview
 
 ### TL;DR
-A new image captioning task to seek the minimum text equivalent of images
-
+- A new image captioning task to seek the minimum text equivalent of images
 
 ![alt text](./assets/teasor.png)
+
+- Panoptic captioning aims to generate a comprehensive textual description for an image, which encapsulates all entities, their respective locations and attributes, relationships among entities, as well as global image state. 
+- Through an extensive evaluation, our work reveals that state-of-the-art Multi-modal Large Language Models (MLLMs) have limited performance in solving panoptic captioning.
+- To address this task, we propose a effective data engine, contribute a new benchmark, and develop a novel decoupling method. 
 
 ### Contributions
 - New task with new metric
@@ -53,7 +55,7 @@ Our SA-Pancap benchmark is based on SA-1B, so you should download the required i
 
 
 ## 🚀 Training
-We use the pretrained ASMv2 model as initialization, so users should first download the [stage2-trained checkpoint](https://huggingface.co/OpenGVLab/ASMv2) from ASMv2. Then, use the following script to run the training code.  
+We use the pretrained ASMv2 model as initialization, so users should first download the [stage2-trained checkpoint](https://huggingface.co/OpenGVLab/ASMv2) from ASMv2. Then, use the following script to run the training code. You should modify the paths of DATA_ROOT and SAVE_CKPT before running the code. 
 
 ```shell
 bash scripts/pancapchain_train.sh
@@ -68,7 +70,7 @@ bash scripts_pancap/eval/merge_lora.sh
 
 ## 🚝 Inference
 
-You can use the following script to do inference on the *validation* set.
+You can use the following script to do inference on the *validation* set. 
 
 ```shell
 bash scripts_pancap/eval/inference_pancapchain_val.sh
@@ -100,4 +102,4 @@ For any question, please contact [Kun-Yu Lin](kunyulin14@outlook.com). If you fi
 ```
 
 ## 🌟 Acknowledgements
-Thanks to these great repositories: [LLaVA](https://github.com/haotian-liu/LLaVA), and [All-Seeing](https://github.com/OpenGVLab/all-seeing), and many other inspiring works in the community.
+Thanks to these great repositories: [LLaVA](https://github.com/haotian-liu/LLaVA) and [All-Seeing](https://github.com/OpenGVLab/all-seeing), and many other inspiring works in the community.
