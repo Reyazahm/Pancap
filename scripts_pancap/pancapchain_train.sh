@@ -13,7 +13,7 @@
 #   -  DATA_PATH: default="./playground/data/pancap/pancapchain_train_data.json", the annotation json file of the training set
 #       - You can use "playground/data/pancap/check_filepath.py" to check if the file_path of each image is correct.
 #   -  DATA_ROOT: the root_path of data (i.e., images), please modify it
-#   -  SAVE_PATH: default="./checkpoints/pancapchain"
+#   -  SAVE_CKPT: default="./checkpoints/pancapchain-lora"
 #   -  TRAIN_BZ: training batchsize, please modify it adaptively
 #   -  ACCU_STEP: accumulation steps to increase the batchsize, please modify it adaptively, NUM_GPU * TRAIN_BZ * ACCU_STEP = 512
 #   -  NUM_EPOCH: default=1, the number of epochs for training
@@ -24,7 +24,7 @@
 PRETRAIN_PATH="./checkpoints/ASMv2"
 DATA_PATH="./playground/data/pancap/sapancap_train_data_pancapchain.json"
 DATA_ROOT="/home/kylin/datasets/"
-SAVE_PATH="./checkpoints/pancapchain-lora/"
+SAVE_CKPT="./checkpoints/pancapchain-lora/"
 TRAIN_BZ=4
 ACCU_STEP=8
 NUM_EPOCH=1
@@ -44,7 +44,7 @@ deepspeed --include="localhost:0,1,2,3" --master_port 31900 llava/train/train_me
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir ${SAVE_PATH} \
+    --output_dir ${SAVE_CKPT} \
     --num_train_epochs ${NUM_EPOCH} \
     --per_device_train_batch_size ${TRAIN_BZ} \
     --per_device_eval_batch_size 4 \

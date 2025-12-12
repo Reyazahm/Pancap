@@ -17,12 +17,13 @@
 </div>
 
 ## 📢 Updates
+- [2025/12/12] 🔥Released the evaluation metric.
 - [2025/12/03] 🔥Released training and inference code.
 - [2025/09/18] 🎉The paper was accepted by NeurIPS'25.
 
 ## 🌈 Overview
 
-### TL;DR
+#### TL;DR
 - A new image captioning task to seek the minimum text equivalent of images
 
 ![alt text](./assets/teasor.png)
@@ -31,7 +32,7 @@
 - Through an extensive evaluation, our work reveals that state-of-the-art Multi-modal Large Language Models (MLLMs) have limited performance in solving panoptic captioning.
 - To address this task, we propose a effective data engine, contribute a new benchmark, and develop a novel decoupling method. 
 
-### Contributions
+#### Contributions
 - New task with new metric
 - New data engine and new benchmark
 - New model, that beats Qwen2.5-VL-72B, InternVL-2.5-78B, Gemini-2.0-Pro with only 13B parameters
@@ -55,38 +56,53 @@ Our SA-Pancap benchmark is based on SA-1B, so you should download the required i
 - The paths of training, validation and test images are summarized in [sapancap_train_data_list.json](playground/data/pancap/sapancap_train_data_list.json), [sapancap_val_data_list.json](playground/data/pancap/sapancap_val_data_list.json) and [sapancap_test_data_list.json](playground/data/pancap/sapancap_test_data_list.json). 
 
 
-## 🚀 Training
+## 🚀 Model: PancapChain
+PancapChain is a simple yet effective method to improve panoptic captioning, following a decoupled learning pipeline. 
+
+### 🚝 Training
 We use the pretrained ASMv2 model as initialization, so users should first download the [stage2-trained checkpoint](https://huggingface.co/OpenGVLab/ASMv2) from ASMv2. Then, use the following script to run the training code. You should modify the paths of DATA_ROOT and SAVE_CKPT before running the code. 
 
 ```shell
 bash scripts/pancapchain_train.sh
 ```
 
-After finish training, you can use the following script to merge LoRA weights. 
+After finish training, you can use the following script to merge LoRA weights. You should modify the path of MODEL_NAME before running the code.
 
 ```shell
 bash scripts_pancap/eval/merge_lora.sh
 ```
 
+### 🚝 Inference
 
-## 🚝 Inference
-
-You can use the following script to do inference on the *validation* set. 
+You can use the following script to do inference on the *validation* set. You should modify the paths of DATA_ROOT and MODEL_NAME before running the code. 
 
 ```shell
 bash scripts_pancap/eval/inference_pancapchain_val.sh
 ```
 
-You can use the following script to do inference on the *test* set.
+You can use the following script to do inference on the *test* set. You should modify the paths of DATA_ROOT and MODEL_NAME before running the code.
 
 ```shell
 bash scripts_pancap/eval/inference_pancapchain_test.sh
 ```
 
 
-## 🛸 Evaluation
+## 🛸 Metric: PancapScore
+PancapScore is a new metric to comprehensively evaluate the quality of generated panoptic captions. To accelerate computation, we leverage parallel processing by spawning multiple worker processes using Python's built-in multiprocessing module. 
 
-The metric code will be released very soon. 
+### 🔦 Evaluation
+
+You can use the following script to evaluate the performance on the *validation* set. You should modify the paths of DATA_ROOT, SAVE_CKPT, and CACHE_PTH before running the code.
+
+```shell
+bash scripts_llmjudge/eval_sapancap_val.sh
+```
+
+You can use the following script to evaluate the performance on the *test* set. You should modify the paths of DATA_ROOT, SAVE_CKPT, and CACHE_PTH before running the code.
+
+```shell
+bash scripts_llmjudge/eval_sapancap_test.sh
+```
 
 
 ## 📌 Citation

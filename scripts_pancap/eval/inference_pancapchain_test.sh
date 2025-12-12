@@ -1,13 +1,19 @@
 #!/bin/bash
 
+############################################################################################################################################### 
 # 
-DATA_ROOT="/home/kylin/datasets/"
+# Paramters to be modified in this scripts
+#   -  NUM_GPUS: the number of GPUs used in this script
+#   -  GPUS=("0" "1" "2" "3" "4" "5"): use the GPUs 0, 1, 2, 3, 4, 5 to run code
+#   -  DATA_ROOT: the root_path of data (i.e., images), please modify it
+#   -  MODEL_PATH: default="./checkpoints/pancapchain-lora-merge"
+# 
+############################################################################################################################################### 
+#       
 
 NUM_GPUS=6
 GPUS=("0" "1" "2" "3" "4" "5")
-
-#
-# model path
+DATA_ROOT="/home/kylin/datasets/"
 MODEL_PATH="./checkpoints/pancapchain-lora-merge"
 
 QFILE=playground/data/pancap/sapancap_test_data_list.json

@@ -25,6 +25,7 @@ var/
 checkpoints/
 datasets/
 slurm/
+tmp/
 outputs/
 cog.yaml
 .ipynb_checkpoints/
