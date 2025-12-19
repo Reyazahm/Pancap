@@ -17,6 +17,7 @@
 </div>
 
 ## 📢 Updates
+- [2025/12/19] 🔥Released PancapChain-13B checkpoint.
 - [2025/12/12] 🔥Released the evaluation metric.
 - [2025/12/03] 🔥Released training and inference code.
 - [2025/09/18] 🎉The paper was accepted by NeurIPS'25.
@@ -85,6 +86,9 @@ You can use the following script to do inference on the *test* set. You should m
 ```shell
 bash scripts_pancap/eval/inference_pancapchain_test.sh
 ```
+
+We have released the trained [PancapChain-13B checkpoint](https://huggingface.co/LasNack/PancapChain-lora-13B) on Hugging Face.
+You can download the checkpoint and try it out locally.
 
 
 ## 🛸 Metric: PancapScore
