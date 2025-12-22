@@ -2,7 +2,7 @@
 
 For details other than the environment configuration, please refer to README.md. 
 
-### Install
+### Install (for training and inference)
 
 1. Clone this repository and navigate to pancap folder
 ```bash
